@@ -13,6 +13,7 @@
 		B3F11E5A1E6651C0004B74E8 /* PokeGOAWAY.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3F11E581E6651C0004B74E8 /* PokeGOAWAY.xcdatamodeld */; };
 		B3F11E5C1E6651C0004B74E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F11E5B1E6651C0004B74E8 /* Assets.xcassets */; };
 		B3F11E5F1E6651C0004B74E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F11E5D1E6651C0004B74E8 /* LaunchScreen.storyboard */; };
+		B3F11E681E6653E1004B74E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F11E671E6653E1004B74E8 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B3F11E5B1E6651C0004B74E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3F11E5E1E6651C0004B74E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3F11E601E6651C0004B74E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F11E671E6653E1004B74E8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F11E681E6653E1004B74E8 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 			children = (
 				B3F11E501E6651C0004B74E8 /* PokeGOAWAY */,
 				B3F11E4F1E6651C0004B74E8 /* Products */,
+				B3F11E661E6653E1004B74E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +69,14 @@
 				B3F11E581E6651C0004B74E8 /* PokeGOAWAY.xcdatamodeld */,
 			);
 			path = PokeGOAWAY;
+			sourceTree = "<group>";
+		};
+		B3F11E661E6653E1004B74E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3F11E671E6653E1004B74E8 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
