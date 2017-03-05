@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B38577361E6B8B0A00016382 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38577351E6B8B0A00016382 /* PokedexViewController.swift */; };
+		B38577381E6B8CE900016382 /* CoreDataHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38577371E6B8CE900016382 /* CoreDataHelp.swift */; };
 		B3F11E521E6651C0004B74E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F11E511E6651C0004B74E8 /* AppDelegate.swift */; };
 		B3F11E541E6651C0004B74E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F11E531E6651C0004B74E8 /* ViewController.swift */; };
 		B3F11E571E6651C0004B74E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F11E551E6651C0004B74E8 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B38577351E6B8B0A00016382 /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
+		B38577371E6B8CE900016382 /* CoreDataHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelp.swift; sourceTree = "<group>"; };
 		B3F11E4E1E6651C0004B74E8 /* PokeGOAWAY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeGOAWAY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F11E511E6651C0004B74E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3F11E531E6651C0004B74E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 			children = (
 				B3F11E511E6651C0004B74E8 /* AppDelegate.swift */,
 				B3F11E531E6651C0004B74E8 /* ViewController.swift */,
+				B38577351E6B8B0A00016382 /* PokedexViewController.swift */,
+				B38577371E6B8CE900016382 /* CoreDataHelp.swift */,
 				B3F11E551E6651C0004B74E8 /* Main.storyboard */,
 				B3F11E5B1E6651C0004B74E8 /* Assets.xcassets */,
 				B3F11E5D1E6651C0004B74E8 /* LaunchScreen.storyboard */,
@@ -153,7 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3F11E541E6651C0004B74E8 /* ViewController.swift in Sources */,
+				B38577361E6B8B0A00016382 /* PokedexViewController.swift in Sources */,
 				B3F11E5A1E6651C0004B74E8 /* PokeGOAWAY.xcdatamodeld in Sources */,
+				B38577381E6B8CE900016382 /* CoreDataHelp.swift in Sources */,
 				B3F11E521E6651C0004B74E8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +326,7 @@
 				B3F11E651E6651C0004B74E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
