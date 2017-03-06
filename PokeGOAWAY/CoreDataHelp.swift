@@ -21,10 +21,10 @@ func addAllPokemon() {
     createPokemon(name: "Pidgey", imageName: "pidgey")
     createPokemon(name: "Psyduck", imageName: "psyduck")
     createPokemon(name: "Rattata", imageName: "rattata")
-    createPokemon(name: "Snorlaz", imageName: "snorlax")
+    createPokemon(name: "Snorlax", imageName: "snorlax")
     createPokemon(name: "Squirtle", imageName: "squirtle")
     createPokemon(name: "Zubat", imageName: "zubat")
-    
+    createPokemon(name: "Pikachu", imageName: "pikachu")
     (UIApplication.shared.delegate as! AppDelegate).saveContext()
 }
 
@@ -34,6 +34,9 @@ func createPokemon(name : String, imageName: String) {
     let pokemon = Pokemon(context: context)
     pokemon.name = name
     pokemon.imageName = imageName
+    if name == "Pikachu" && imageName == "pikachu"{
+        pokemon.caught = true
+    }
 }
 
 func getAllPokemon() -> [Pokemon] {
