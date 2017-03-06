@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -25,22 +25,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         pokemons = getAllPokemon()
         
         manager.delegate = self
+        
         //gets location
         if CLLocationManager.authorizationStatus() ==  .authorizedWhenInUse {
-            print("Ready to GO!")
+            
+            mapView.delegate = self
+            
             mapView.showsUserLocation = true
             manager.startUpdatingLocation()
             
             Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { (timer) in
                 // Spawn a Pokemon
                 if let coord = self.manager.location?.coordinate {
-                let anno = MKPointAnnotation()
-                anno.coordinate = coord
-                let randlat = (Double(arc4random_uniform(200)) - 100.0) / 100000.0
-                let randlon = (Double(arc4random_uniform(200)) - 100.0) / 100000.0
-                anno.coordinate.latitude += randlat
-                anno.coordinate.longitude += randlon
-                self.mapView.addAnnotation(anno)
+                    let pokemon = self.pokemons[Int(arc4random_uniform(UInt32(self.pokemons.count)))]
+                    let anno = PokeAnnotation(coord: coord, pokemon: pokemon)
+                    let randlat = (Double(arc4random_uniform(200)) - 100.0) / 100000.0
+                    let randlon = (Double(arc4random_uniform(200)) - 100.0) / 100000.0
+                    anno.coordinate.latitude += randlat
+                    anno.coordinate.longitude += randlon
+                    self.mapView.addAnnotation(anno)
                 }
             })
             
@@ -50,6 +53,30 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            let annoView = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
+            
+            annoView.image = UIImage(named: "player")
+            var frame = annoView.frame
+            frame.size.height = 50
+            frame.size.width = 50
+            annoView.frame = frame
+            
+            return annoView
+        }
+        
+        let annoView = MKAnnotationView(annotation: annotation, reuseIdentifier: nil)
+        let pokemon = (annotation as! PokeAnnotation).pokemon
+        annoView.image = UIImage(named: pokemon.imageName!)
+        
+        var frame = annoView.frame
+        frame.size.height = 50
+        frame.size.width = 50
+        annoView.frame = frame
+        
+        return annoView
+    }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if updateCount < 3 {
             let region = MKCoordinateRegionMakeWithDistance(manager.location!.coordinate, 200, 200)

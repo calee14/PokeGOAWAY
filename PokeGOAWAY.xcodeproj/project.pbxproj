@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B35529FD1E6CF76800E93913 /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35529FC1E6CF76800E93913 /* PokeAnnotation.swift */; };
 		B38577361E6B8B0A00016382 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38577351E6B8B0A00016382 /* PokedexViewController.swift */; };
 		B38577381E6B8CE900016382 /* CoreDataHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38577371E6B8CE900016382 /* CoreDataHelp.swift */; };
 		B3F11E521E6651C0004B74E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F11E511E6651C0004B74E8 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B35529FC1E6CF76800E93913 /* PokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
 		B38577351E6B8B0A00016382 /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
 		B38577371E6B8CE900016382 /* CoreDataHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelp.swift; sourceTree = "<group>"; };
 		B3F11E4E1E6651C0004B74E8 /* PokeGOAWAY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeGOAWAY.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,7 @@
 				B3F11E531E6651C0004B74E8 /* ViewController.swift */,
 				B38577351E6B8B0A00016382 /* PokedexViewController.swift */,
 				B38577371E6B8CE900016382 /* CoreDataHelp.swift */,
+				B35529FC1E6CF76800E93913 /* PokeAnnotation.swift */,
 				B3F11E551E6651C0004B74E8 /* Main.storyboard */,
 				B3F11E5B1E6651C0004B74E8 /* Assets.xcassets */,
 				B3F11E5D1E6651C0004B74E8 /* LaunchScreen.storyboard */,
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3F11E541E6651C0004B74E8 /* ViewController.swift in Sources */,
+				B35529FD1E6CF76800E93913 /* PokeAnnotation.swift in Sources */,
 				B38577361E6B8B0A00016382 /* PokedexViewController.swift in Sources */,
 				B3F11E5A1E6651C0004B74E8 /* PokeGOAWAY.xcdatamodeld in Sources */,
 				B38577381E6B8CE900016382 /* CoreDataHelp.swift in Sources */,
