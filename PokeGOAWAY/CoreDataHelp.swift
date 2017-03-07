@@ -34,9 +34,6 @@ func createPokemon(name : String, imageName: String) {
     let pokemon = Pokemon(context: context)
     pokemon.name = name
     pokemon.imageName = imageName
-    if name == "Pikachu" && imageName == "pikachu"{
-        pokemon.caught = true
-    }
 }
 
 func getAllPokemon() -> [Pokemon] {
